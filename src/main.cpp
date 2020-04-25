@@ -1,40 +1,30 @@
 #include <Arduino.h>
-#include <ESP8266WiFi.h>
 
-#define PIN0 16
-#define PIN1 5
-#define PIN2 4
-#define PIN3 14
-#define PIN4 12
-#define PIN5 13
-#define PIN6 0
-#define PIN7 2
-
-#define PIN_RX 3
+#define PIN_RX 0
 
 bool serialModeEnabled = false;
-int pins[] = {PIN0, PIN1, PIN2, PIN3, PIN4, PIN5, PIN6, PIN7};
+int pins[] = {2, 3, 4, 5, 6, 7, 8, 9};
 
 void turnOnAll() {
-  digitalWrite(PIN0, HIGH);
-  digitalWrite(PIN1, HIGH);
-  digitalWrite(PIN2, HIGH);
-  digitalWrite(PIN3, HIGH);
-  digitalWrite(PIN4, HIGH);
-  digitalWrite(PIN5, HIGH);
-  digitalWrite(PIN6, HIGH);
-  digitalWrite(PIN7, HIGH);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  digitalWrite(6, HIGH);
+  digitalWrite(7, HIGH);
+  digitalWrite(8, HIGH);
+  digitalWrite(9, HIGH);
 }
 
 void turnOff() {
-  digitalWrite(PIN0, LOW);
-  digitalWrite(PIN1, LOW);
-  digitalWrite(PIN2, LOW);
-  digitalWrite(PIN3, LOW);
-  digitalWrite(PIN4, LOW);
-  digitalWrite(PIN5, LOW);
-  digitalWrite(PIN6, LOW);
-  digitalWrite(PIN7, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+  digitalWrite(6, LOW);
+  digitalWrite(7, LOW);
+  digitalWrite(8, LOW);
+  digitalWrite(9, LOW);
 }
 
 void turnOn(int i) {
@@ -43,14 +33,14 @@ void turnOn(int i) {
 
 void setup() {
   pinMode(PIN_RX, INPUT);
-  pinMode(PIN0, OUTPUT);
-  pinMode(PIN1, OUTPUT);
-  pinMode(PIN2, OUTPUT);
-  pinMode(PIN3, OUTPUT);
-  pinMode(PIN4, OUTPUT);
-  pinMode(PIN5, OUTPUT);
-  pinMode(PIN6, OUTPUT);
-  pinMode(PIN7, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
 
   turnOff();
   Serial.begin(9600);
